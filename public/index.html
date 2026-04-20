@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignalFlow AI | Institutional Market Signals for Retail</title>
+    <meta name="description" content="Stop overtrading. Start winning with AI-powered liquidity gaps and volume profile signals for TradingView, IBKR, and Robinhood.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific Page Enhancements */
+        .liquidity-map {
+            margin-top: 5rem;
+            padding: 3rem;
+            text-align: left;
+        }
+        .stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .stat-item span {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .stat-item strong {
+            font-size: 1.5rem;
+            color: var(--accent-cyan);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0;">
+            <div class="logo" style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800;">
+                SIGNALFLOW<span style="color: var(--accent-cyan);">AI</span>
+            </div>
+            <div class="nav-links">
+                <a href="#pricing" class="btn btn-primary">Join the Elite</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <div class="signal-badge">INSTITUTIONAL GRADE ALPHA</div>
+            <h1>Stop Overtrading.<br>Start Winning.</h1>
+            <p>We track where the "Smart Money" hides. High-probability signals based on Liquidity Gaps and Volume Profiles, delivered in real-time to your devices.</p>
+            <div class="cta-group">
+                <a href="#dashboard" class="btn btn-primary">Start Your Free Trial</a>
+            </div>
+
+            <!-- Dashboard Preview -->
+            <div class="glass liquidity-map" style="width: 100%; max-width: 900px;">
+                <h3 style="margin-bottom: 1rem;">Live Liquidity Snapshot (SPY)</h3>
+                <div style="height: 200px; border-left: 2px solid var(--accent-cyan); position: relative; overflow: hidden;">
+                    <!-- Static visualization of a Chart/Liquidity Map -->
+                    <div style="position: absolute; top: 20%; width: 60%; height: 20px; background: rgba(0, 242, 255, 0.1); border-right: 4px solid var(--accent-cyan);"></div>
+                    <div style="position: absolute; top: 50%; width: 80%; height: 20px; background: rgba(255, 255, 255, 0.05);"></div>
+                    <p style="position: absolute; bottom: 10px; right: 10px; font-size: 0.7rem; color: var(--text-muted);">Institutional Wall Detected @ $512.50</p>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span>Success Rate</span>
+                        <strong>78.4%</strong>
+                    </div>
+                    <div class="stat-item">
+                        <span>Active Signals</span>
+                        <strong>4</strong>
+                    </div>
+                    <div class="stat-item">
+                        <span>Vol. Surge</span>
+                        <strong>1.2x</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="container" style="padding: 100px 0; text-align: center;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Ready to Flow?</h2>
+            <div class="grid">
+                <div class="card glass">
+                    <h3>Starter</h3>
+                    <div style="font-size: 2rem; margin: 1rem 0;">$9<span style="font-size: 1rem; color: var(--text-muted);">/mo</span></div>
+                    <ul style="list-style: none; color: var(--text-muted); text-align: left; margin-bottom: 2rem;">
+                        <li>✓ 3 Active Top Assets</li>
+                        <li>✓ Telegram Basic Alerts</li>
+                        <li>✓ End-of-day Summary</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width: 100%;">Get Started</a>
+                </div>
+                <div class="card glass" style="border-color: var(--accent-cyan);">
+                    <div class="signal-badge" style="background: var(--accent-cyan); color: #000;">MOST POPULAR</div>
+                    <h3>Pro</h3>
+                    <div style="font-size: 2rem; margin: 1rem 0;">$19<span style="font-size: 1rem; color: var(--text-muted);">/mo</span></div>
+                    <ul style="list-style: none; color: var(--text-muted); text-align: left; margin-bottom: 2rem;">
+                        <li>✓ 15+ Global Assets</li>
+                        <li>✓ Discord Alpha Access</li>
+                        <li>✓ Volatility Filter</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width: 100%;">Go Pro</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container" style="padding: 50px 0; border-top: 1px solid var(--glass-border); color: var(--text-muted); font-size: 0.8rem; display: flex; justify-content: space-between;">
+        <div>&copy; 2026 SignalFlow AI. Trade at your own risk.</div>
+        <div>Terms | Privacy | Disclosure</div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

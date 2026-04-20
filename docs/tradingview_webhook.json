@@ -1,0 +1,8 @@
+{
+  "asset": "{{ticker}}",
+  "side": "LONG",
+  "price": "{{close}}",
+  "dxy_context": "DXY is breaking support, usually bullish for risk assets",
+  "vwap_status": "Price above VWAP (Institutional support)",
+  "timeframe": "4H"
+}
