@@ -1,0 +1,36 @@
+//@version=5
+strategy("SignalFlow AI - SMC Engine", overlay=true, initial_capital=10000, currency=currency.USD)
+
+// --- INPUTS ---
+show_ob = input(true, "Show Order Blocks")
+show_fvg = input(true, "Show Fair Value Gaps")
+webhook_id = input.string("YOUR_SUPABASE_FUNCTION_URL", "Webhook URL")
+
+// --- LOGIC: FAIR VALUE GAPS ---
+is_bullish_fvg = low[0] > high[2] and close[1] > high[2]
+is_bearish_fvg = high[0] < low[2] and close[1] < low[2]
+
+plotshape(is_bullish_fvg, "Bullish FVG", shape.labelup, location.belowbar, color.new(color.cyan, 0), size=size.tiny, text="FVG")
+plotshape(is_bearish_fvg, "Bearish FVG", shape.labeldown, location.abovebar, color.new(color.orange, 0), size=size.tiny, text="FVG")
+
+// --- LOGIC: ORDER BLOCKS (Simplified) ---
+var float ob_top = na
+var float ob_bot = na
+
+if (is_bullish_fvg)
+    ob_top := high[1]
+    ob_bot := low[1]
+
+// --- SIGNAL FLOW EXECUTION ---
+long_condition = is_bullish_fvg and close > ta.vwap
+short_condition = is_bearish_fvg and close < ta.vwap
+
+if (long_condition)
+    strategy.entry("SMC_LONG", strategy.long, comment="Signal Sent to AI")
+    // Note: Alert generation should be configured in the Alert Dialog using the JSON template provided in docs.
+
+if (short_condition)
+    strategy.entry("SMC_SHORT", strategy.short, comment="Signal Sent to AI")
+
+// --- VISUALS ---
+plot(ta.vwap, "Institutional VWAP", color.new(color.gray, 50), style=plot.style_linebr)
