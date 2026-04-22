@@ -3,31 +3,18 @@ import { Check, ShieldCheck, Zap, Crown } from 'lucide-react';
 
 const tiers = [
   {
-    name: "Starter",
-    price: "9",
-    description: "Perfect for testing the flow.",
-    features: ["3 Main Assets (BTC, SPY, QQQ)", "Basic Telegram Alerts", "Weekly Performance Report"],
-    cta: "Start Basic",
-    icon: <Zap className="text-slate-400" />,
-    popular: false
-  },
-  {
-    name: "Pro",
-    price: "19",
-    description: "For active daily traders.",
-    features: ["15+ Global Assets", "Volatility Regime Filter", "Discord Alpha Access", "Email Daily Briefing"],
-    cta: "Go Pro",
-    icon: <ShieldCheck className="text-cyan-400" />,
+    name: "Ahorrista GPS",
+    price: "5",
+    description: "Tu guía diaria para que la inflación no te gane.",
+    features: [
+      "Alertas WhatsApp/Telegram", 
+      "Explicación Macro (Lente LatAm)", 
+      "Píldora Educativa Diaria", 
+      "Asistente para tu bolsillo"
+    ],
+    cta: "Proteger mis Ahorros",
+    icon: <ShieldCheck className="text-[#00f2ff]" />,
     popular: true
-  },
-  {
-    name: "Premium",
-    price: "39",
-    description: "Your personal Macro Hedge Fund.",
-    features: ["AI Intelligent Narrator", "Full Macro Context (DXY/VIX)", "Webhook-to-Broker Support", "Priority 24/7 Support"],
-    cta: "Get the Copilot",
-    icon: <Crown className="text-yellow-400" />,
-    popular: false
   }
 ];
 
