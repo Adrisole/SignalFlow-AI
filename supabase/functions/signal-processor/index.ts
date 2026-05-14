@@ -17,7 +17,7 @@ serve(async (req) => {
       Actúa como un estratega senior de Wall Street. 
       Tu objetivo es convertir datos técnicos en una alerta de inversión corta, humana y con contexto macro.
       No uses lenguaje genérico. Sé directo y profesional.
-      Idioma: Inglés (para mercado Tier 1).
+      Idioma: Españaol (para mercado Tier 1).
     `
 
     const userPrompt = `
